@@ -1,0 +1,663 @@
+{
+  "settings": {
+    "languages": [
+      "en",
+      "es",
+      "fr",
+      "de",
+      "uk",
+      "jp"
+    ],
+    "forceNER": true,
+    "tag": "nlp",
+    "threshold": 0.5,
+    "autoLoad": true,
+    "autoSave": true,
+    "modelFileName": "model.nlp",
+    "executeActionsBeforeAnswers": false,
+    "calculateSentiment": true
+  },
+  "nluManager": {
+    "settings": {
+      "tag": "nlu-manager"
+    },
+    "locales": [
+      "en",
+      "es",
+      "fr",
+      "de",
+      "uk",
+      "jp"
+    ],
+    "languageNames": {},
+    "domainManagers": {
+      "en": {
+        "settings": {
+          "locale": "en",
+          "trainByDomain": false,
+          "tag": "domain-manager-en",
+          "nluByDomain": {
+            "default": {
+              "className": "NeuralNlu",
+              "settings": {}
+            }
+          },
+          "useStemDict": true
+        },
+        "stemDict": {
+          "hello": {
+            "intent": "greet.hello",
+            "domain": "default"
+          },
+          "hi": {
+            "intent": "greet.hello",
+            "domain": "default"
+          }
+        },
+        "intentDict": {
+          "greet.hello": "default"
+        },
+        "sentences": [
+          {
+            "domain": "default",
+            "utterance": "Hello",
+            "intent": "greet.hello"
+          },
+          {
+            "domain": "default",
+            "utterance": "Hi",
+            "intent": "greet.hello"
+          }
+        ],
+        "domains": {
+          "master_domain": {
+            "settings": {
+              "locale": "en",
+              "tag": "nlu-en",
+              "keepStopwords": true,
+              "nonefeatureValue": 1,
+              "nonedeltaMultiplier": 1.2,
+              "spellCheck": false,
+              "spellCheckDistance": 1,
+              "filterZeros": true,
+              "log": true
+            },
+            "features": {
+              "hello": 1,
+              "hi": 1
+            },
+            "intents": {
+              "greet.hello": 1
+            },
+            "intentFeatures": {
+              "greet.hello": {
+                "hello": 1,
+                "hi": 1
+              }
+            },
+            "featuresToIntent": {
+              "hello": [
+                "greet.hello"
+              ],
+              "hi": [
+                "greet.hello"
+              ]
+            },
+            "neuralNetwork": {
+              "settings": {
+                "locale": "en",
+                "tag": "nlu-en",
+                "keepStopwords": true,
+                "nonefeatureValue": 1,
+                "nonedeltaMultiplier": 1.2,
+                "spellCheck": false,
+                "spellCheckDistance": 1,
+                "filterZeros": true,
+                "log": true
+              },
+              "features": [
+                "hello",
+                "hi"
+              ],
+              "intents": [
+                "greet.hello"
+              ],
+              "perceptrons": [
+                [
+                  7.071227073669434,
+                  7.127616882324219,
+                  7.109124642023429
+                ]
+              ]
+            }
+          }
+        }
+      },
+      "es": {
+        "settings": {
+          "locale": "es",
+          "trainByDomain": false,
+          "tag": "domain-manager-es",
+          "nluByDomain": {
+            "default": {
+              "className": "NeuralNlu",
+              "settings": {}
+            }
+          },
+          "useStemDict": true
+        },
+        "stemDict": {
+          "hol": {
+            "intent": "greet.hello",
+            "domain": "default"
+          }
+        },
+        "intentDict": {
+          "greet.hello": "default"
+        },
+        "sentences": [
+          {
+            "domain": "default",
+            "utterance": "Hola",
+            "intent": "greet.hello"
+          }
+        ],
+        "domains": {
+          "master_domain": {
+            "settings": {
+              "locale": "es",
+              "tag": "nlu-es",
+              "keepStopwords": true,
+              "nonefeatureValue": 1,
+              "nonedeltaMultiplier": 1.2,
+              "spellCheck": false,
+              "spellCheckDistance": 1,
+              "filterZeros": true,
+              "log": true
+            },
+            "features": {
+              "hol": 1
+            },
+            "intents": {
+              "greet.hello": 1
+            },
+            "intentFeatures": {
+              "greet.hello": {
+                "hol": 1
+              }
+            },
+            "featuresToIntent": {
+              "hol": [
+                "greet.hello"
+              ]
+            },
+            "neuralNetwork": {
+              "settings": {
+                "locale": "es",
+                "tag": "nlu-es",
+                "keepStopwords": true,
+                "nonefeatureValue": 1,
+                "nonedeltaMultiplier": 1.2,
+                "spellCheck": false,
+                "spellCheckDistance": 1,
+                "filterZeros": true,
+                "log": true
+              },
+              "features": [
+                "hol"
+              ],
+              "intents": [
+                "greet.hello"
+              ],
+              "perceptrons": [
+                [
+                  9.46274471282959,
+                  4.736227717439353
+                ]
+              ]
+            }
+          }
+        }
+      },
+      "fr": {
+        "settings": {
+          "locale": "fr",
+          "trainByDomain": false,
+          "tag": "domain-manager-fr",
+          "nluByDomain": {
+            "default": {
+              "className": "NeuralNlu",
+              "settings": {}
+            }
+          },
+          "useStemDict": true
+        },
+        "stemDict": {
+          "bonjour": {
+            "intent": "greet.hello",
+            "domain": "default"
+          }
+        },
+        "intentDict": {
+          "greet.hello": "default"
+        },
+        "sentences": [
+          {
+            "domain": "default",
+            "utterance": "Bonjour",
+            "intent": "greet.hello"
+          }
+        ],
+        "domains": {
+          "master_domain": {
+            "settings": {
+              "locale": "fr",
+              "tag": "nlu-fr",
+              "keepStopwords": true,
+              "nonefeatureValue": 1,
+              "nonedeltaMultiplier": 1.2,
+              "spellCheck": false,
+              "spellCheckDistance": 1,
+              "filterZeros": true,
+              "log": true
+            },
+            "features": {
+              "bonjour": 1
+            },
+            "intents": {
+              "greet.hello": 1
+            },
+            "intentFeatures": {
+              "greet.hello": {
+                "bonjour": 1
+              }
+            },
+            "featuresToIntent": {
+              "bonjour": [
+                "greet.hello"
+              ]
+            },
+            "neuralNetwork": {
+              "settings": {
+                "locale": "fr",
+                "tag": "nlu-fr",
+                "keepStopwords": true,
+                "nonefeatureValue": 1,
+                "nonedeltaMultiplier": 1.2,
+                "spellCheck": false,
+                "spellCheckDistance": 1,
+                "filterZeros": true,
+                "log": true
+              },
+              "features": [
+                "bonjour"
+              ],
+              "intents": [
+                "greet.hello"
+              ],
+              "perceptrons": [
+                [
+                  9.46274471282959,
+                  4.736227717439353
+                ]
+              ]
+            }
+          }
+        }
+      },
+      "de": {
+        "settings": {
+          "locale": "de",
+          "trainByDomain": false,
+          "tag": "domain-manager-de",
+          "nluByDomain": {
+            "default": {
+              "className": "NeuralNlu",
+              "settings": {}
+            }
+          },
+          "useStemDict": true
+        },
+        "stemDict": {
+          "hallo": {
+            "intent": "greet.hello",
+            "domain": "default"
+          }
+        },
+        "intentDict": {
+          "greet.hello": "default"
+        },
+        "sentences": [
+          {
+            "domain": "default",
+            "utterance": "Hallo",
+            "intent": "greet.hello"
+          }
+        ],
+        "domains": {
+          "master_domain": {
+            "settings": {
+              "locale": "de",
+              "tag": "nlu-de",
+              "keepStopwords": true,
+              "nonefeatureValue": 1,
+              "nonedeltaMultiplier": 1.2,
+              "spellCheck": false,
+              "spellCheckDistance": 1,
+              "filterZeros": true,
+              "log": true
+            },
+            "features": {
+              "hallo": 1
+            },
+            "intents": {
+              "greet.hello": 1
+            },
+            "intentFeatures": {
+              "greet.hello": {
+                "hallo": 1
+              }
+            },
+            "featuresToIntent": {
+              "hallo": [
+                "greet.hello"
+              ]
+            },
+            "neuralNetwork": {
+              "settings": {
+                "locale": "de",
+                "tag": "nlu-de",
+                "keepStopwords": true,
+                "nonefeatureValue": 1,
+                "nonedeltaMultiplier": 1.2,
+                "spellCheck": false,
+                "spellCheckDistance": 1,
+                "filterZeros": true,
+                "log": true
+              },
+              "features": [
+                "hallo"
+              ],
+              "intents": [
+                "greet.hello"
+              ],
+              "perceptrons": [
+                [
+                  9.46274471282959,
+                  4.736227717439353
+                ]
+              ]
+            }
+          }
+        }
+      },
+      "uk": {
+        "settings": {
+          "locale": "uk",
+          "trainByDomain": false,
+          "tag": "domain-manager-uk",
+          "nluByDomain": {
+            "default": {
+              "className": "NeuralNlu",
+              "settings": {}
+            }
+          },
+          "useStemDict": true
+        },
+        "stemDict": {
+          "привіт": {
+            "intent": "greet.hello",
+            "domain": "default"
+          }
+        },
+        "intentDict": {
+          "greet.hello": "default"
+        },
+        "sentences": [
+          {
+            "domain": "default",
+            "utterance": "Привіт",
+            "intent": "greet.hello"
+          }
+        ],
+        "domains": {
+          "master_domain": {
+            "settings": {
+              "locale": "uk",
+              "tag": "nlu-uk",
+              "keepStopwords": true,
+              "nonefeatureValue": 1,
+              "nonedeltaMultiplier": 1.2,
+              "spellCheck": false,
+              "spellCheckDistance": 1,
+              "filterZeros": true,
+              "log": true
+            },
+            "features": {
+              "привіт": 1
+            },
+            "intents": {
+              "greet.hello": 1
+            },
+            "intentFeatures": {
+              "greet.hello": {
+                "привіт": 1
+              }
+            },
+            "featuresToIntent": {
+              "привіт": [
+                "greet.hello"
+              ]
+            },
+            "neuralNetwork": {
+              "settings": {
+                "locale": "uk",
+                "tag": "nlu-uk",
+                "keepStopwords": true,
+                "nonefeatureValue": 1,
+                "nonedeltaMultiplier": 1.2,
+                "spellCheck": false,
+                "spellCheckDistance": 1,
+                "filterZeros": true,
+                "log": true
+              },
+              "features": [
+                "привіт"
+              ],
+              "intents": [
+                "greet.hello"
+              ],
+              "perceptrons": [
+                [
+                  9.46274471282959,
+                  4.736227717439353
+                ]
+              ]
+            }
+          }
+        }
+      },
+      "jp": {
+        "settings": {
+          "locale": "jp",
+          "trainByDomain": false,
+          "tag": "domain-manager-jp",
+          "nluByDomain": {
+            "default": {
+              "className": "NeuralNlu",
+              "settings": {}
+            }
+          },
+          "useStemDict": true
+        },
+        "stemDict": {
+          "こんにちは": {
+            "intent": "greet.hello",
+            "domain": "default"
+          }
+        },
+        "intentDict": {
+          "greet.hello": "default"
+        },
+        "sentences": [
+          {
+            "domain": "default",
+            "utterance": "こんにちは",
+            "intent": "greet.hello"
+          }
+        ],
+        "domains": {
+          "master_domain": {
+            "settings": {
+              "locale": "jp",
+              "tag": "nlu-jp",
+              "keepStopwords": true,
+              "nonefeatureValue": 1,
+              "nonedeltaMultiplier": 1.2,
+              "spellCheck": false,
+              "spellCheckDistance": 1,
+              "filterZeros": true,
+              "log": true
+            },
+            "features": {
+              "こんにちは": 1
+            },
+            "intents": {
+              "greet.hello": 1
+            },
+            "intentFeatures": {
+              "greet.hello": {
+                "こんにちは": 1
+              }
+            },
+            "featuresToIntent": {
+              "こんにちは": [
+                "greet.hello"
+              ]
+            },
+            "neuralNetwork": {
+              "settings": {
+                "locale": "jp",
+                "tag": "nlu-jp",
+                "keepStopwords": true,
+                "nonefeatureValue": 1,
+                "nonedeltaMultiplier": 1.2,
+                "spellCheck": false,
+                "spellCheckDistance": 1,
+                "filterZeros": true,
+                "log": true
+              },
+              "features": [
+                "こんにちは"
+              ],
+              "intents": [
+                "greet.hello"
+              ],
+              "perceptrons": [
+                [
+                  9.46274471282959,
+                  4.736227717439353
+                ]
+              ]
+            }
+          }
+        }
+      }
+    },
+    "intentDomains": {},
+    "extraSentences": [
+      [
+        "en",
+        "Hello"
+      ],
+      [
+        "en",
+        "Hi"
+      ],
+      [
+        "es",
+        "Hola"
+      ],
+      [
+        "fr",
+        "Bonjour"
+      ],
+      [
+        "de",
+        "Hallo"
+      ],
+      [
+        "uk",
+        "Привіт"
+      ],
+      [
+        "jp",
+        "こんにちは"
+      ]
+    ]
+  },
+  "ner": {
+    "settings": {
+      "tag": "ner",
+      "entityPreffix": "%",
+      "entitySuffix": "%"
+    },
+    "rules": {}
+  },
+  "nlgManager": {
+    "settings": {
+      "tag": "nlg-manager"
+    },
+    "responses": {
+      "en": {
+        "greet.hello": [
+          {
+            "answer": "Hello! How can we assist you today?"
+          }
+        ]
+      },
+      "es": {
+        "greet.hello": [
+          {
+            "answer": "¡Hola! ¿Cómo podemos ayudarte hoy?"
+          }
+        ]
+      },
+      "fr": {
+        "greet.hello": [
+          {
+            "answer": "Bonjour ! Comment pouvons-nous vous aider aujourd'hui ?"
+          }
+        ]
+      },
+      "de": {
+        "greet.hello": [
+          {
+            "answer": "Hallo! Wie können wir Ihnen heute helfen?"
+          }
+        ]
+      },
+      "uk": {
+        "greet.hello": [
+          {
+            "answer": "Привіт! Чим ми можемо вам допомогти сьогодні?"
+          }
+        ]
+      },
+      "jp": {
+        "greet.hello": [
+          {
+            "answer": "こんにちは！今日は何かお手伝いできることはありますか？"
+          }
+        ]
+      }
+    }
+  },
+  "actionManager": {
+    "settings": {
+      "tag": "action-manager"
+    },
+    "actions": {}
+  },
+  "slotManager": {}
+}
